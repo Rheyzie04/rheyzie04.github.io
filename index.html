@@ -36,7 +36,7 @@
       text-align: center;
       margin-bottom: 10px;
     }
-    .about, .projects, .contact {
+    .about, .projects, .gallery, .contact {
       margin: 32px 0;
     }
     ul.projects-list {
@@ -57,8 +57,37 @@
       margin: 0 10px;
       font-size: 1.1em;
     }
+    /* Gallery styles */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #0002;
+      object-fit: cover;
+      height: 140px;
+    }
   </style>
-</head>
+</head> .gallery {
+  margin: 32px 0;
+  {
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+  }
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0002;
+  object-fit: cover;
+  height: 140px;
+  }
 <body>
   <div class="container">
     <img src="https://avatars.githubusercontent.com/u/83655925" alt="Profile Picture" class="profile">
@@ -81,6 +110,14 @@
         </li>
         <!-- Add more projects as you create them! -->
       </ul>
+    </div>
+    <div class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/pic 2.jpg" alt="Image 1">
+        <img src="images/pic 3.jpg" alt="Image 2">
+        <img src="images/pic 4.jpg" alt="Image 3">
+      </div>
     </div>
     <div class="contact">
       <h2>Contact</h2>
