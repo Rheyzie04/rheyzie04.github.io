@@ -13,13 +13,12 @@
       padding: 0;
     }
     .container {
-      max-width: 650px;
+      max-width: 700px;
       margin: 50px auto;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 8px #0001;
       padding: 32px 24px;
-      text-align: center;
     }
     img.profile {
       width: 120px;
@@ -28,10 +27,20 @@
       border: 3px solid #4B0082;
       margin-bottom: 18px;
       object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
-    h1 {
+    h1, h2 {
       color: #4B0082;
+      text-align: center;
       margin-bottom: 10px;
+    }
+    .about, .projects, .contact {
+      margin: 32px 0;
+    }
+    ul.projects-list {
+      padding-left: 20px;
     }
     a {
       color: #4B0082;
@@ -42,6 +51,7 @@
     }
     .social {
       margin-top: 12px;
+      text-align: center;
     }
     .social a {
       margin: 0 10px;
@@ -51,13 +61,37 @@
 </head>
 <body>
   <div class="container">
-    <img src="https://avatars.githubusercontent.com/u/your-github-user-id" alt="Profile Picture" class="profile">
+    <img src="https://avatars.githubusercontent.com/u/83655925" alt="Profile Picture" class="profile">
     <h1>Reycelyn Miranda</h1>
-    <p>Hello! I'm Reycelyn, and this is my personal website.<br>
-    I'm passionate about web development and learning new things.</p>
+    <div class="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Reycelyn. I'm a web enthusiast who loves learning, building websites, and helping others get started with technology.<br>
+        I enjoy working on creative projects and am always eager to learn something new!
+      </p>
+    </div>
+    <div class="projects">
+      <h2>Projects</h2>
+      <ul class="projects-list">
+        <li>
+          <strong>Personal Website</strong> – This site! Built with HTML and hosted on GitHub Pages.
+        </li>
+        <li>
+          <strong>Sample Project</strong> – <a href="https://github.com/rheyzie04/sample-project" target="_blank">View on GitHub</a>
+        </li>
+        <!-- Add more projects as you create them! -->
+      </ul>
+    </div>
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>
+        Feel free to connect with me:<br>
+        <a href="mailto:breycelyn@yahoo.com">Email</a> | 
+        <a href="https://github.com/rheyzie04" target="_blank">GitHub</a>
+      </p>
+    </div>
     <div class="social">
-      <a href="https://github.com/rheyzie04" target="_blank">GitHub</a> |
-      <a href="mailto:breycelyn@yahoo.com">Email Me</a>
+      <a href="https://github.com/rheyzie04" target="_blank">GitHub</a>
     </div>
   </div>
 </body>
