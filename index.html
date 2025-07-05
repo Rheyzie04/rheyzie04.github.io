@@ -5,34 +5,60 @@
   <title>Reycelyn Miranda | Personal Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      background: #f5f5fa;
-      color: #222;
+    :root {
+      --primary: #6a4cff;
+      --accent: #00b7c2;
+      --background: #f3f4fa;
+      --text: #1a1a2e;
+      --card: #fff;
+      --shadow: 0 4px 16px #0002;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
       margin: 0;
       padding: 0;
     }
+    .header {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 30px 0 10px 0;
+      text-align: center;
+      border-radius: 0 0 18px 18px;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 2.2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
     .container {
       max-width: 700px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px #0001;
-      padding: 32px 24px;
+      margin: 0 auto 50px auto;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 36px 28px;
     }
     img.profile {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 3px solid #4B0082;
-      margin-bottom: 18px;
+      border: 5px solid var(--primary);
+      box-shadow: 0 2px 12px #0002;
       object-fit: cover;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 18px auto;
+      transition: transform 0.2s;
     }
-    h1, h2 {
-      color: #4B0082;
+    img.profile:hover {
+      transform: scale(1.05) rotate(-2deg);
+    }
+    h2 {
+      color: var(--primary);
       text-align: center;
       margin-bottom: 10px;
     }
@@ -43,11 +69,13 @@
       padding-left: 20px;
     }
     a {
-      color: #4B0082;
+      color: var(--accent);
       text-decoration: none;
+      transition: color 0.15s;
     }
     a:hover {
       text-decoration: underline;
+      color: var(--primary);
     }
     .social {
       margin-top: 12px;
@@ -56,6 +84,22 @@
     .social a {
       margin: 0 10px;
       font-size: 1.1em;
+    }
+    .button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: 600;
+      transition: background 0.15s;
+      cursor: pointer;
+      margin: 8px 0;
+      display: inline-block;
+    }
+    .button:hover {
+      background: var(--accent);
     }
     /* Gallery styles */
     .gallery-grid {
@@ -74,9 +118,11 @@
   </style>
 </head>
 <body>
-  <div class="container">
-<img src="images/profile.jpg" alt="Profile Picture" class="profile">
+  <div class="header">
     <h1>Reycelyn Miranda</h1>
+  </div>
+  <div class="container">
+    <img src="images/profile.jpg" alt="Profile Picture" class="profile">
     <div class="about">
       <h2>About Me</h2>
       <p>
@@ -93,7 +139,6 @@
         <li>
           <strong>Sample Project</strong> – <a href="https://github.com/rheyzie04/sample-project" target="_blank">View on GitHub</a>
         </li>
-        <!-- Add more projects as you create them! -->
       </ul>
     </div>
     <div class="gallery">
@@ -107,9 +152,8 @@
     <div class="contact">
       <h2>Contact</h2>
       <p>
-        Feel free to connect with me:<br>
-        <a href="mailto:breycelyn@yahoo.com">Email</a> | 
-        <a href="https://github.com/rheyzie04" target="_blank">GitHub</a>
+        <a href="mailto:breycelyn@yahoo.com" class="button">Email Me</a>
+        <a href="https://github.com/rheyzie04" target="_blank" class="button">GitHub</a>
       </p>
     </div>
     <div class="social">
