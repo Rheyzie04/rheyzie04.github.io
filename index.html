@@ -36,33 +36,85 @@
       letter-spacing: 2px;
     }
     .container {
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto 50px auto;
       background: var(--card);
       border-radius: 18px;
       box-shadow: var(--shadow);
       padding: 36px 28px;
     }
-    img.profile {
-      width: 120px;
-      height: 120px;
+    /* About section with photo and text side by side */
+    .about-flex {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin: 32px 0;
+    }
+    .about-photo {
+      flex-shrink: 0;
+    }
+    .about-photo .profile {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 5px solid var(--primary);
       box-shadow: 0 2px 12px #0002;
       object-fit: cover;
+      margin: 0;
       display: block;
-      margin: 0 auto 18px auto;
       transition: transform 0.2s;
     }
-    img.profile:hover {
+    .about-photo .profile:hover {
       transform: scale(1.05) rotate(-2deg);
+    }
+    .about-text {
+      flex: 1;
     }
     h2 {
       color: var(--primary);
       text-align: center;
       margin-bottom: 10px;
     }
-    .about, .projects, .gallery, .contact {
+    /* Responsive for about section */
+    @media (max-width: 700px) {
+      .about-flex {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+      }
+      .about-text {
+        width: 100%;
+      }
+    }
+    /* Skills section */
+    .skills {
+      margin: 32px 0;
+      text-align: center;
+    }
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+    .skills-list li {
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 1em;
+      box-shadow: 0 2px 6px #0001;
+      margin-bottom: 8px;
+      transition: background 0.2s;
+    }
+    .skills-list li:hover {
+      background: var(--primary);
+    }
+    .projects, .gallery, .contact {
       margin: 32px 0;
     }
     ul.projects-list {
@@ -115,6 +167,10 @@
       object-fit: cover;
       height: 140px;
     }
+    /* Extra: Center images in gallery */
+    .gallery-grid {
+      justify-items: center;
+    }
   </style>
 </head>
 <body>
@@ -122,16 +178,37 @@
     <h1>Reycelyn Miranda</h1>
   </div>
   <div class="container">
-    <img src="profile.jpg" alt="Profile Picture" class="profile">
-    <div class="about">
-      <h2>About Me</h2>
-      <p>
-        Hi! I'm Reycelyn. I'm a virtual assistant enthusiast who loves learning, building websites, and helping others get started with technology.
-        I'm also Specialized in administrative support, email management, scheduling research, data entry and basic websight designer.
-        With Strong sense of initiative and excellent communication skills I thrive in remote work environment and enjoy taking on tasks that allow business owners to focus on what they do the best.<br>
-        I enjoy working on creative projects and am always eager to learn something new! 
-      </p>
+    <!-- About Me with photo beside text -->
+    <div class="about about-flex">
+      <div class="about-photo">
+        <img src="profile.jpg" alt="Profile Picture" class="profile">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hi! I'm Reycelyn. I'm a web enthusiast who loves learning, building websites, and helping others get started with technology.<br>
+          I enjoy working on creative projects and am always eager to learn something new!
+        </p>
+      </div>
     </div>
+    <!-- Skills section with updated details and a picture -->
+    <div class="skills">
+      <h2>Skills</h2>
+      <img src="skills.jpg" alt="Skills Illustration" style="width:180px;max-width:100%;margin:20px auto 16px auto;display:block;border-radius:14px;box-shadow:0 2px 8px #0001;">
+      <ul class="skills-list">
+        <li>Outstanding customer service</li>
+        <li>Excellent communication</li>
+        <li>Web research</li>
+        <li>Ability to balance multiple projects</li>
+        <li>Proficient in Wix, Shopify, eBay, Amazon, Airbnb</li>
+        <li>Expert in Microsoft Office 365, Office Suite, WPS Office</li>
+        <li>Skilled in Canva and Adobe Photoshop</li>
+        <li>Familiar with Webex and Zoom</li>
+        <li>Event planning</li>
+        <li>Expertise in Google Docs, Calendar, Gmail, G Suite</li>
+      </ul>
+    </div>
+    <!-- Projects -->
     <div class="projects">
       <h2>Projects</h2>
       <ul class="projects-list">
@@ -143,6 +220,7 @@
         </li>
       </ul>
     </div>
+    <!-- Gallery -->
     <div class="gallery">
       <h2>Gallery</h2>
       <div class="gallery-grid">
@@ -151,6 +229,7 @@
         <img src="pic3.jpg" alt="Image 3">
       </div>
     </div>
+    <!-- Contact -->
     <div class="contact">
       <h2>Contact</h2>
       <p>
