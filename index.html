@@ -13,12 +13,12 @@
       --card: #fff;
       --shadow: 0 4px 16px #0002;
     }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: var(--background);
-      color: var(--text);
+    html, body {
+      background: #f6f0e9;
       margin: 0;
       padding: 0;
+      font-family: 'Segoe UI', 'Georgia', Arial, sans-serif;
+      color: var(--text);
     }
     .header {
       background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -36,59 +36,48 @@
       letter-spacing: 2px;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto 50px auto;
       background: var(--card);
       border-radius: 18px;
       box-shadow: var(--shadow);
-      padding: 36px 28px;
+      padding: 36px 28px 0 28px;
     }
-    /* About section with photo and text side by side */
-    .about-flex {
+    /* Centered profile photo */
+    .profile-center {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 32px;
-      margin: 32px 0;
+      margin-top: 32px;
+      margin-bottom: 14px;
     }
-    .about-photo {
-      flex-shrink: 0;
-    }
-    .about-photo .profile {
-      width: 140px;
-      height: 140px;
+    .profile-center img {
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       border: 5px solid var(--primary);
       box-shadow: 0 2px 12px #0002;
       object-fit: cover;
-      margin: 0;
       display: block;
-      transition: transform 0.2s;
-    }
-    .about-photo .profile:hover {
-      transform: scale(1.05) rotate(-2deg);
+      margin-bottom: 14px;
+      background: #f6f0e9;
     }
     .about-text {
-      flex: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
     }
     h2 {
       color: var(--primary);
       text-align: center;
       margin-bottom: 10px;
-    }
-    /* Responsive for about section */
-    @media (max-width: 700px) {
-      .about-flex {
-        flex-direction: column;
-        gap: 18px;
-        text-align: center;
-      }
-      .about-text {
-        width: 100%;
-      }
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2em;
+      letter-spacing: 0.01em;
     }
     /* Skills section */
     .skills {
-      margin: 32px 0;
+      margin: 40px 0 24px 0;
       text-align: center;
     }
     .skills-list {
@@ -114,6 +103,15 @@
     .skills-list li:hover {
       background: var(--primary);
     }
+    .skills img {
+      width:180px;
+      max-width:100%;
+      margin:20px auto 16px auto;
+      display:block;
+      border-radius:14px;
+      box-shadow:0 2px 8px #0001;
+    }
+    /* Projects */
     .projects, .gallery, .contact {
       margin: 32px 0;
     }
@@ -153,113 +151,57 @@
     .button:hover {
       background: var(--accent);
     }
-    /* Gallery styles */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-      margin-top: 16px;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px #0002;
-      object-fit: cover;
-      height: 140px;
-    }
-    /* Extra: Center images in gallery */
-    .gallery-grid {
-      justify-items: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <h1>Reycelyn Miranda</h1>
-  </div>
-  <div class="container">
-    <!-- About Me with photo beside text -->
-    <div class="about about-flex">
-      <div class="about-photo">
-        <img src="profile.jpg" alt="Profile Picture" class="profile">
-      </div>
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          Hi! I'm Reycelyn. I'm a virtual assistant enthusiast who loves learning, building websites, and helping others get started with technology.
-          I'm also Specialized in administrative support, email management, scheduling research, data entry and basic websight designer. With Strong sense of initiative and excellent communication skills I thrive in remote work environment and enjoy taking on tasks that allow business owners to focus on what they do the best.
-          I enjoy working on creative projects and am always eager to learn something new!
-        </p>
-      </div>
-    </div>
-    <!-- Skills section with updated details and a picture -->
-    <div class="skills">
-      <h2>Skills</h2>
-      <img src="skills.jpg" alt="Skills Illustration" style="width:180px;max-width:100%;margin:20px auto 16px auto;display:block;border-radius:14px;box-shadow:0 2px 8px #0001;">
-      <ul class="skills-list">
-        <li>Outstanding customer service</li>
-        <li>Excellent communication</li>
-        <li>Web research</li>
-        <li>Ability to balance multiple projects</li>
-        <li>Proficient in Wix, Shopify, eBay, Amazon, Airbnb</li>
-        <li>Expert in Microsoft Office 365, Office Suite, WPS Office</li>
-        <li>Skilled in Canva and Adobe Photoshop</li>
-        <li>Familiar with Webex and Zoom</li>
-        <li>Event planning</li>
-        <li>Expertise in Google Docs, Calendar, Gmail, G Suite</li>
-      </ul>
-    </div>
-    <!-- Projects -->
-    <div class="projects">
-      <h2>Projects</h2>
-      <ul class="projects-list">
-        <li>
-          <strong>Personal Website</strong> – This site! Built with HTML and hosted on GitHub Pages.
-        </li>
-        <li>
-          <strong>Sample Project</strong> – <a href="https://github.com/rheyzie04/sample-project" target="_blank">View on GitHub</a>
-        </li>
-      </ul>
-    </div>
-<!-- Why Me Section -->
-    <div class="section">
-      <img src="whyme.jpg" alt="Why Me" class="why-img">
-      <div class="about-content">
-        <h2 class="section-title">Why Me?</h2>
-        <p class="why-desc">
-          You should choose me as your General VA because I don’t just complete tasks—I bring care, consistency, and a genuine commitment to seeing your business grow. I’m highly organized, dependable, and proactive, which means I don’t wait to be told what to do—I anticipate your needs and deliver efficiently. I value honest communication and take initiative, freeing you from workload so you can focus on the bigger picture. With a results-driven work ethic, clear communication, and a positive attitude, I make collaboration easy and enjoyable. Whether it’s managing your email, scheduling, research, or admin tasks, I’ll handle it with precision and heart.
-        </p>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
-<title>How I Can Help You & My Go-To Tools</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    html, body {
+    /* Why Me Section */
+    .why-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 32px;
+      margin: 48px 0;
       background: #f6f0e9;
-      margin: 0;
-      padding: 0;
-      font-family: 'Georgia', 'Times New Roman', serif;
-      color: #222;
+      border-radius: 16px;
+      padding: 24px 18px;
+      box-shadow: 0 1.5px 8px #0001;
     }
-    .page-wrapper {
-      max-width: 1200px;
-      margin: 48px auto 0 auto;
-      background: #fff;
-      box-shadow: 0 2px 24px #0002;
-      border-radius: 18px;
-      padding: 52px 48px 60px 48px;
-      min-height: 80vh;
+    .why-img {
+      width: 210px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-right: 8px;
+      background: #e4c4a0;
+      flex-shrink: 0;
+    }
+    .why-content {
+      flex: 1;
+      min-width: 0;
     }
     .section-title {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.5em;
+      font-size: 2em;
       font-weight: 400;
-      letter-spacing: 0.04em;
+      margin: 0 0 18px 0;
+      letter-spacing: 0.03em;
       color: #231b14;
-      margin-bottom: 38px;
+      line-height: 1.1;
+      text-align: left;
+    }
+    .why-desc {
+      font-size: 1.16em;
+      line-height: 1.7;
+      color: #3c3322;
+      margin: 0;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      text-align: left;
+    }
+    /* How I Can Help You */
+    .section-title2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2em;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: #231b14;
+      margin-bottom: 32px;
       margin-top: 0;
       text-align: left;
     }
@@ -268,6 +210,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
       margin-bottom: 60px;
+      margin-top: 12px;
     }
     .help-card {
       background: #f6f0e9;
@@ -293,9 +236,10 @@
       line-height: 1.5;
       margin: 0;
     }
+    /* Tools section */
     .tools-title {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.1em;
+      font-size: 2em;
       font-weight: 400;
       color: #231b14;
       margin-bottom: 30px;
@@ -328,8 +272,8 @@
     }
     /* Responsive */
     @media (max-width: 990px) {
-      .page-wrapper {
-        padding: 28px 3vw 44px 3vw;
+      .container {
+        padding: 24px 3vw 0 3vw;
       }
       .help-grid {
         grid-template-columns: 1fr 1fr;
@@ -337,6 +281,23 @@
       }
       .tools-grid {
         grid-template-columns: 1fr 1fr 1fr;
+      }
+      .why-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .why-img {
+        margin: 0 0 20px 0;
+      }
+      .why-content {
+        text-align: center;
+      }
+      .section-title, .section-title2, .tools-title {
+        text-align: center;
+      }
+      .why-desc {
+        text-align: center;
       }
     }
     @media (max-width: 700px) {
@@ -346,15 +307,19 @@
       .tools-grid {
         grid-template-columns: 1fr 1fr;
       }
-      .section-title, .tools-title {
+      .section-title, .section-title2, .tools-title {
         font-size: 1.4em;
+      }
+      .profile-center img {
+        width: 120px;
+        height: 120px;
       }
     }
     @media (max-width: 500px) {
-      .page-wrapper {
-        padding: 12px 1vw 22px 1vw;
+      .container {
+        padding: 12px 1vw 0 1vw;
       }
-      .section-title, .tools-title {
+      .section-title, .section-title2, .tools-title {
         font-size: 1.1em;
       }
       .help-card {
@@ -365,111 +330,135 @@
         padding: 8px 3px;
       }
     }
-    /* Decorative header mimicking the video */
-    .decor-header {
-      width: 100vw;
-      text-align: center;
-      margin: 0 0 25px 0;
-      position: sticky;
-      top: 0;
-      z-index: 3;
-      background: #f6f0e9;
-      padding: 38px 0 0 0;
-    }
-    .decor-title {
-      display: inline-block;
-      background: #fff;
-      border-radius: 13px;
-      font-size: 2.1em;
-      font-family: 'Arial Black', Arial, sans-serif;
-      font-weight: bold;
-      color: #181818;
-      padding: 16px 40px 14px 40px;
-      letter-spacing: 0.03em;
-      box-shadow: 0 2px 8px #0002;
-      margin-bottom: 0;
-    }
-    .decor-question {
-      margin-top: 14px;
-      display: inline-block;
-      background: #fff;
-      border-radius: 8px;
-      font-size: 1em;
-      color: #222;
-      padding: 7px 18px;
-      font-family: Arial, sans-serif;
-      box-shadow: 0 1px 4px #0001;
-    }
   </style>
 </head>
 <body>
+  <div class="header">
+    <h1>Reycelyn Miranda</h1>
+  </div>
+  <div class="container">
+    <!-- Centered Profile Photo -->
+    <div class="profile-center">
+      <img src="profile.jpg" alt="Profile Picture" class="profile">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Reycelyn. I'm a virtual assistant enthusiast who loves learning, building websites, and helping others get started with technology.
+        I'm also specialized in administrative support, email management, scheduling, research, data entry, and basic website design. With a strong sense of initiative and excellent communication skills, I thrive in remote work environments and enjoy taking on tasks that allow business owners to focus on what they do best.
+        I enjoy working on creative projects and am always eager to learn something new!
+      </p>
+    </div>
+    <!-- Skills section with updated details and a picture -->
+    <div class="skills">
+      <h2>Skills</h2>
+      <img src="skills.jpg" alt="Skills Illustration">
+      <ul class="skills-list">
+        <li>Outstanding customer service</li>
+        <li>Excellent communication</li>
+        <li>Web research</li>
+        <li>Ability to balance multiple projects</li>
+        <li>Proficient in Wix, Shopify, eBay, Amazon, Airbnb</li>
+        <li>Expert in Microsoft Office 365, Office Suite, WPS Office</li>
+        <li>Skilled in Canva and Adobe Photoshop</li>
+        <li>Familiar with Webex and Zoom</li>
+        <li>Event planning</li>
+        <li>Expertise in Google Docs, Calendar, Gmail, G Suite</li>
+      </ul>
+    </div>
+    <!-- Projects -->
+    <div class="projects">
+      <h2>Projects</h2>
+      <ul class="projects-list">
+        <li>
+          <strong>Personal Website</strong> – This site! Built with HTML and hosted on GitHub Pages.
+        </li>
+        <li>
+          <strong>Sample Project</strong> – <a href="https://github.com/rheyzie04/sample-project" target="_blank">View on GitHub</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Why Me Section -->
+    <div class="why-section">
+      <img src="whyme.jpg" alt="Why Me" class="why-img">
+      <div class="why-content">
+        <h2 class="section-title">Why Me?</h2>
+        <p class="why-desc">
+          You should choose me as your General VA because I don’t just complete tasks—I bring care, consistency, and a genuine commitment to seeing your business grow. I’m highly organized, dependable, and proactive, which means I don’t wait to be told what to do—I anticipate your needs and deliver efficiently. I value honest communication and take initiative, freeing you from workload so you can focus on the bigger picture. With a results-driven work ethic, clear communication, and a positive attitude, I make collaboration easy and enjoyable. Whether it’s managing your email, scheduling, research, or admin tasks, I’ll handle it with precision and heart.
+        </p>
+      </div>
+    </div>
     <!-- How I Can Help You Section -->
-    <h2 class="section-title">HOW I CAN HELP YOU</h2>
-    <div class="help-grid">
-      <div class="help-card">
-        <div class="help-card-title">Email Management</div>
-        <div class="help-card-desc">
-          Organize and prioritize your inbox, respond to inquiries, set up filters and rules, and keep things so you never miss anything.
+    <div>
+      <h2 class="section-title2">How I Can Help You</h2>
+      <div class="help-grid">
+        <div class="help-card">
+          <div class="help-card-title">Email Management</div>
+          <div class="help-card-desc">
+            Organize and prioritize your inbox, respond to inquiries, set up filters and rules, and keep things so you never miss anything.
+          </div>
         </div>
-      </div>
-      <div class="help-card">
-        <div class="help-card-title">Calendar & Schedule Management</div>
-        <div class="help-card-desc">
-          Organize appointments, meetings, and reminders; manage bookings and keep your schedule running smooth and on time.
+        <div class="help-card">
+          <div class="help-card-title">Calendar & Schedule Management</div>
+          <div class="help-card-desc">
+            Organize appointments, meetings, and reminders; manage bookings and keep your schedule running smooth and on time.
+          </div>
         </div>
-      </div>
-      <div class="help-card">
-        <div class="help-card-title">Data Entry & File Organization</div>
-        <div class="help-card-desc">
-          Enter, update, and organize data accurately and efficiently, ensuring everything is easy to find and always up to date.
+        <div class="help-card">
+          <div class="help-card-title">Data Entry & File Organization</div>
+          <div class="help-card-desc">
+            Enter, update, and organize data accurately and efficiently, ensuring everything is easy to find and always up to date.
+          </div>
         </div>
-      </div>
-      <div class="help-card">
-        <div class="help-card-title">Online Research</div>
-        <div class="help-card-desc">
-          Get clear, relevant information and summaries to help you make better decisions, find opportunities, and save time.
+        <div class="help-card">
+          <div class="help-card-title">Online Research</div>
+          <div class="help-card-desc">
+            Get clear, relevant information and summaries to help you make better decisions, find opportunities, and save time.
+          </div>
         </div>
-      </div>
-      <div class="help-card">
-        <div class="help-card-title">Customer Support</div>
-        <div class="help-card-desc">
-          Respond to customer inquiries, solve issues, and provide excellent service with empathy and professionalism.
+        <div class="help-card">
+          <div class="help-card-title">Customer Support</div>
+          <div class="help-card-desc">
+            Respond to customer inquiries, solve issues, and provide excellent service with empathy and professionalism.
+          </div>
         </div>
-      </div>
-      <div class="help-card">
-        <div class="help-card-title">Basic Graphic Design</div>
-        <div class="help-card-desc">
-          Create simple graphics and visuals for social media, presentations, and more using tools like Canva.
+        <div class="help-card">
+          <div class="help-card-title">Basic Graphic Design</div>
+          <div class="help-card-desc">
+            Create simple graphics and visuals for social media, presentations, and more using tools like Canva.
+          </div>
         </div>
       </div>
     </div>
     <!-- My Go-To Tools Section -->
-    <h2 class="tools-title">MY GO-TO TOOLS</h2>
-    <div class="tools-grid">
-      <div class="tool-btn">Google Workspace</div>
-      <div class="tool-btn">Google Calendar</div>
-      <div class="tool-btn">Monday.com</div>
-      <div class="tool-btn">Go High Level</div>
-      <div class="tool-btn">Google Meet</div>
-      <div class="tool-btn">GitHub.io</div>
-      <div class="tool-btn">Slack</div>
-      <div class="tool-btn">Canva</div>
-      <div class="tool-btn">Email</div>
-      <div class="tool-btn">Zoom</div>
-      <div class="tool-btn">Pinterest</div>
-      <div class="tool-btn">Skype</div>
-      <div class="tool-btn">Calendly</div>
-      <div class="tool-btn">ChatGPT</div>
-      <div class="tool-btn">Outlook</div>
-      <div class="tool-btn">Whatsapp</div>
-      <div class="tool-btn">Google Forms</div>
-      <div class="tool-btn">Loom</div>
-      <div class="tool-btn">Asana</div>
-      <div class="tool-btn">Gemini</div>
-      <div class="tool-btn">Adobe Express</div>
-   </div>
-  </div>
-  <div class="contact">
+    <div>
+      <h2 class="tools-title">My Go-To Tools</h2>
+      <div class="tools-grid">
+        <div class="tool-btn">Google Workspace</div>
+        <div class="tool-btn">Google Calendar</div>
+        <div class="tool-btn">Monday.com</div>
+        <div class="tool-btn">Go High Level</div>
+        <div class="tool-btn">Google Meet</div>
+        <div class="tool-btn">GitHub.io</div>
+        <div class="tool-btn">Slack</div>
+        <div class="tool-btn">Canva</div>
+        <div class="tool-btn">Email</div>
+        <div class="tool-btn">Zoom</div>
+        <div class="tool-btn">Pinterest</div>
+        <div class="tool-btn">Skype</div>
+        <div class="tool-btn">Calendly</div>
+        <div class="tool-btn">ChatGPT</div>
+        <div class="tool-btn">Outlook</div>
+        <div class="tool-btn">Whatsapp</div>
+        <div class="tool-btn">Google Forms</div>
+        <div class="tool-btn">Loom</div>
+        <div class="tool-btn">Asana</div>
+        <div class="tool-btn">Gemini</div>
+        <div class="tool-btn">Adobe Express</div>
+      </div>
+    </div>
+    <!-- Contact and Social -->
+    <div class="contact">
       <h2>Contact</h2>
       <p>
         Feel free to connect with me:<br>
