@@ -233,7 +233,181 @@
   </div>
 </body>
 </html>
-<!-- How I Can Help You Section -->
+<title>How I Can Help You & My Go-To Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      background: #f6f0e9;
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #222;
+    }
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 48px auto 0 auto;
+      background: #fff;
+      box-shadow: 0 2px 24px #0002;
+      border-radius: 18px;
+      padding: 52px 48px 60px 48px;
+      min-height: 80vh;
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5em;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #231b14;
+      margin-bottom: 38px;
+      margin-top: 0;
+      text-align: left;
+    }
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 60px;
+    }
+    .help-card {
+      background: #f6f0e9;
+      border: 1px solid #d3c0a7;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #0001;
+      padding: 26px 22px 22px 22px;
+      min-height: 135px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .help-card-title {
+      font-size: 1.18em;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #3c2d19;
+      letter-spacing: 0.01em;
+    }
+    .help-card-desc {
+      font-size: 1em;
+      color: #3c3322;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .tools-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.1em;
+      font-weight: 400;
+      color: #231b14;
+      margin-bottom: 30px;
+      margin-top: 0;
+      text-align: left;
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px 24px;
+    }
+    .tool-btn {
+      background: #f6f0e9;
+      border: 1.7px solid #bfa784;
+      border-radius: 8px;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 1.08em;
+      color: #3c2d19;
+      padding: 14px 10px;
+      margin: 0;
+      text-align: center;
+      cursor: default;
+      transition: background 0.17s, box-shadow 0.2s;
+      box-shadow: 0 1.5px 6px #0001;
+      font-weight: 500;
+      user-select: none;
+    }
+    .tool-btn:active {
+      background: #ede1d0;
+    }
+    /* Responsive */
+    @media (max-width: 990px) {
+      .page-wrapper {
+        padding: 28px 3vw 44px 3vw;
+      }
+      .help-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .tools-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    @media (max-width: 700px) {
+      .help-grid {
+        grid-template-columns: 1fr;
+      }
+      .tools-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .section-title, .tools-title {
+        font-size: 1.4em;
+      }
+    }
+    @media (max-width: 500px) {
+      .page-wrapper {
+        padding: 12px 1vw 22px 1vw;
+      }
+      .section-title, .tools-title {
+        font-size: 1.1em;
+      }
+      .help-card {
+        padding: 18px 9px 14px 9px;
+      }
+      .tool-btn {
+        font-size: 0.99em;
+        padding: 8px 3px;
+      }
+    }
+    /* Decorative header mimicking the video */
+    .decor-header {
+      width: 100vw;
+      text-align: center;
+      margin: 0 0 25px 0;
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      background: #f6f0e9;
+      padding: 38px 0 0 0;
+    }
+    .decor-title {
+      display: inline-block;
+      background: #fff;
+      border-radius: 13px;
+      font-size: 2.1em;
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-weight: bold;
+      color: #181818;
+      padding: 16px 40px 14px 40px;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 8px #0002;
+      margin-bottom: 0;
+    }
+    .decor-question {
+      margin-top: 14px;
+      display: inline-block;
+      background: #fff;
+      border-radius: 8px;
+      font-size: 1em;
+      color: #222;
+      padding: 7px 18px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 1px 4px #0001;
+    }
+  </style>
+</head>
+<body>
+  <div class="decor-header">
+    <div class="decor-title">PORTFOLIO WITH<br>NO VA EXPERIENCE</div><br>
+    <span class="decor-question">hi may sample portfolio ka po ba no exp</span>
+  </div>
+  <div class="page-wrapper">
+    <!-- How I Can Help You Section -->
     <h2 class="section-title">HOW I CAN HELP YOU</h2>
     <div class="help-grid">
       <div class="help-card">
@@ -279,12 +453,14 @@
       <div class="tool-btn">Google Workspace</div>
       <div class="tool-btn">Google Calendar</div>
       <div class="tool-btn">Monday.com</div>
+      <div class="tool-btn">Go High Level</div>
       <div class="tool-btn">Google Meet</div>
-      <div class="tool-btn">github.io</div>
+      <div class="tool-btn">Systeme.io</div>
       <div class="tool-btn">Slack</div>
       <div class="tool-btn">Canva</div>
       <div class="tool-btn">Email</div>
       <div class="tool-btn">Zoom</div>
+      <div class="tool-btn">Trello</div>
       <div class="tool-btn">Skype</div>
       <div class="tool-btn">Calendly</div>
       <div class="tool-btn">ChatGPT</div>
@@ -292,24 +468,12 @@
       <div class="tool-btn">Notion</div>
       <div class="tool-btn">Whatsapp</div>
       <div class="tool-btn">Google Forms</div>
+      <div class="tool-btn">Loom</div>
       <div class="tool-btn">Asana</div>
       <div class="tool-btn">ClickUp</div>
-      <div class="tool-btn">pinterest</div>
+      <div class="tool-btn">Gemini</div>
       <div class="tool-btn">Adobe Express</div>
-    </div>
-  </div>
-</body>
-</html>
-    <!-- Contact -->
-    <div class="contact">
-      <h2>Contact</h2>
-      <p>
-        <a href="mailto:breycelyn@yahoo.com" class="button">Email Me</a>
-        <a href="https://github.com/rheyzie04" target="_blank" class="button">GitHub</a>
-      </p>
-    </div>
-    <div class="social">
-      <a href="https://github.com/rheyzie04" target="_blank">GitHub</a>
+      <div class="tool-btn">Buffer</div>
     </div>
   </div>
 </body>
